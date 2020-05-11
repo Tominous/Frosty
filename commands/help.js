@@ -15,6 +15,7 @@ module.exports = {
         .addField("Page 4: Economy", "Economy Commands")
         .addField("Page 5: Miscellaneous", "Miscellaneous Commands")
         .addField("Vote", "https://top.gg/bot/688085554868518941")
+        .addField("Github Repo" , "https://github.com/kenrag24/Frosty")
         message.channel.send(embed)
       }
 	},
