@@ -6,7 +6,7 @@ module.exports = {
 	name: 'stonks',
 	description: 'invest in some stonks',
 	execute: async(message, args) => {
-        let timeoutstonks = 3600000
+        let timeoutstonks = 600000
         let stonks =  db.fetch(`stonks${message.author.id}`)
 
 
@@ -22,7 +22,7 @@ module.exports = {
             let job = jobs[Math.floor(Math.random()* jobs.length)]
 
             let embed = new Discord.MessageEmbed()
-
+            .setColor("RANDOm")
             .setAuthor(`${message.author.tag}, it payed off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you invested in ${job} and earnt ${amountearned} coins`)
 

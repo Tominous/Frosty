@@ -29,6 +29,14 @@ dbl.on('posted', () => {
   })
 client.once('ready', async () => {
 	console.log('Ready!');
+	let servers = client.guilds.cache.size
+	client.user.setPresence({
+        status: "dnd",
+        activity: {
+            name:"_help | " + servers + " servers",
+            type: "PLAYING"
+        }
+    })
 
 });
 
@@ -73,13 +81,13 @@ client.on('message', async message => {
 	if (message.content === "_help 1") {
 		let embed = new Discord.MessageEmbed()
 		.setColor("AQUA")
-		.addField("_3", "gets a 3x3 scramble")
-		.addField("_2", "gets a 2x2 scramble")
-		.addField("_4", "gets a 4x4 scramble")
-		.addField("_skewb", "gets a skewb scramble")
-		.addField("_squan", "gets a squan scramble")
-		.addField("_pyra", "gets a pyra scramble")
-		.addField("_cubing", "gets an image from r/cubers")
+		.addField("_3", "gets a 3x3 scramble", true)
+		.addField("_2", "gets a 2x2 scramble", true)
+		.addField("_4", "gets a 4x4 scramble",true)
+		.addField("_skewb", "gets a skewb scramble", true)
+		.addField("_squan", "gets a squan scramble", true)
+		.addField("_pyra", "gets a pyra scramble", true)
+		.addField("_cubing", "gets an image from r/cubers", true)
 		message.channel.send(embed)
 	} else if(message.content === "_help 2") {
 		let embed = new Discord.MessageEmbed()
@@ -102,6 +110,7 @@ client.on('message', async message => {
 		.addField("_work", "lets you work every hour")
 		.addField("_stonks", "lets you invest in stonks every hour")
 		.addField("_beg", "lets you beg every ten minutes")
+		.addField("_scout", "lets you search for money every ten minutes")
 		.addField("_bal", "check your balance")
 		.addField("_daily", "gets you 500 coins every day")
 		.addField("_give <user> <amount>", "lets you pay a user")
@@ -116,7 +125,7 @@ client.on('message', async message => {
 	}
 
 	if (message.content === "_meme") {
-        const subReddits = ["dankmeme", "meme", "memes"]
+        const subReddits = ["meme", "memes"]
         const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
         const img = await randomPuppy(random);
@@ -125,8 +134,20 @@ client.on('message', async message => {
         .setImage(img)
         .setTitle(`From r/${random}`)
         .setURL(`https://reddit.com/r/${random}`);
-        message.channel.send(embed)
-    }
+		message.channel.send(embed)
+		
+    } else if(message.content === "_dankmeme") {
+		const subReddits = ["dankmemes"]
+        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
+
+        const img = await randomPuppy(random);
+        const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setImage(img)
+        .setTitle(`From r/${random}`)
+        .setURL(`https://reddit.com/r/${random}`);
+		message.channel.send(embed)
+	}
 })
 
 db.connect().then(() => {
