@@ -25,6 +25,7 @@
     "scrambo": "^0.3.0",
     "sqlite": "^4.0.7",
     "sqlite3": "^4.2.0",
+    "urban": "^0.3.2",
     "vultrex.db": "^1.4.1",
     "weather-js": "^2.0.0"
   }

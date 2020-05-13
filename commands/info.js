@@ -13,6 +13,7 @@ module.exports = {
         .addField("Prefix", "_")
         .addField("Support Server", "https://discord.gg/aSN6UcF", true)
         .addField("Github Repo", "https://github.com/kenrag24/Frosty")
+        .addField("Guide", "https://kenrag24.gitbook.io/frosty/")
         .addField("Memory Usage", usedmemoryinmb + " MB", true)
         .addField("Owner" , "NerdNoOneLikes#0115", true)
         .addField("CPU", "1.8 GHz Intel Core i5", true)

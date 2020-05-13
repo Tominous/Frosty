@@ -92,9 +92,9 @@ client.on('message', async message => {
 	} else if(message.content === "_help 2") {
 		let embed = new Discord.MessageEmbed()
 		.setColor("AQUA")
-		.addField("_kick <user>", "kicks a user")
-		.addField("_ban <user>", "bans a user")
-		.addField("_report <user> <reason>", "reports a user")
+		.addField("_kick [user]", "kicks a user")
+		.addField("_ban [user]", "bans a user")
+		.addField("_report [user] [reason]", "reports a user")
 		message.channel.send(embed)
 
 	} else if(message.content === "_help 3") {
@@ -103,6 +103,7 @@ client.on('message', async message => {
 		.addField("_joke", "gets a joke")
 		.addField("_cnjoke", "gets a chuck norris coding joke")
 		.addField("_meme", "gets a meme from a variety of subreddits")
+		.addField("_urban [word]", "gets the definition of a word from urban dictionary")
 		message.channel.send(embed)
 	} else if(message.content === "_help 4") {
 		let embed = new Discord.MessageEmbed()
@@ -113,13 +114,15 @@ client.on('message', async message => {
 		.addField("_scout", "lets you search for money every ten minutes")
 		.addField("_bal", "check your balance")
 		.addField("_daily", "gets you 500 coins every day")
-		.addField("_give <user> <amount>", "lets you pay a user")
+		.addField("_give [user] [amount]", "lets you pay a user")
 		message.channel.send(embed)
 	} else if(message.content === "_help 5") {
 		let embed = new Discord.MessageEmbed()
 		.setColor("AQUA")
 		.addField("_corona all", "gets overall covid stats")
-		.addField("_corona <country>", "gets covid stats for a specific country")
+		.addField("_corona [country]", "gets covid stats for a specific country")
+		.addField("_coronastate [US State]", "gets covid stats for a specific US State")
+		.addField("_weather [location]", "gets weather data on a sepcific location")
 		.addField("_rank", "check your rank")
 		message.channel.send(embed)
 	}

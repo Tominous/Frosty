@@ -22,7 +22,7 @@ module.exports = {
             let job = jobs[Math.floor(Math.random()* jobs.length)]
 
             let embed = new Discord.MessageEmbed()
-            .setColor("RANDOm")
+            .setColor("RANDOM")
             .setAuthor(`${message.author.tag}, it payed off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you invested in ${job} and earnt ${amountearned} coins`)
 
