@@ -5,7 +5,7 @@ const db = require('quick.db')
 module.exports = {
 	name: 'work',
 	description: 'work, and earn money',
-	execute(message, args) {
+	execute(client,message, args) {
         let timeoutworked = 3600000
         let worked =  db.fetch(`worked_${message.author.id}`)
 
@@ -22,8 +22,8 @@ module.exports = {
             let job = jobs[Math.floor(Math.random()* jobs.length)]
 
             let embed = new Discord.MessageEmbed()
-            .setColor("RANDOm")
-            .setAuthor(`${message.author.tag}, it payed off`, message.author.displayAvatarURL())
+            .setColor("RANDOM")
+            .setAuthor(`${message.author.tag}, it paid off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you worked as a ${job} and earnt ${amountearned} coins`)
 
             message.channel.send(embed)

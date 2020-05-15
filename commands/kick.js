@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'kick',
 	description: 'kick a specific user',
-	execute(message, args) {
+	execute(client,message, args) {
         if (!message.guild) return;
 
         if (message.content.startsWith('=kick')) {

@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'report',
 	description: 'report a user',
-	execute(message, args) {
+	execute(client,message, args) {
         if (message.content.startsWith("=report")) {
             let User=message.mentions.users.first()||null
             var prefix = '-'

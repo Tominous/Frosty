@@ -5,7 +5,7 @@ const db = require('quick.db')
 module.exports = {
 	name: 'scout',
 	description: 'search an area',
-	execute(message, args) {
+	execute(client,message, args) {
         let timeoutworked = 600000
         let worked =  db.fetch(`scouted_${message.author.id}`)
 

@@ -4,7 +4,7 @@ const { join } =  require("path");
 module.exports = {
 	name: 'rank',
 	description: 'get your rank or someone elses',
-	execute: async(message, args) => {
+	execute: async(client,message, args) => {
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
         const data = await message.client.db.get(`level-${message.guild.id}-${member.id}`)
 

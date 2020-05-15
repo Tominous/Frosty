@@ -1,7 +1,7 @@
 module.exports = {
 	name: '3',
 	description: 'get a 3x3 scramble',
-	execute(message, args) {
+	execute(client,message, args) {
         let amount = args.slice(0).join(' ');
         if(!amount) amount = 1;
         if(amount>12) {

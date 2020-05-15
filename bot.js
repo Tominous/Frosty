@@ -4,6 +4,7 @@ const Discord = require('discord.js')
 const { VultrexDB } = require("vultrex.db");
 const randomPuppy = require('random-puppy')
 const client = new Discord.Client();
+const qdb = require('quick.db')
 client.commands = new Discord.Collection();
 const db = new VultrexDB({
   provider: "sqlite",
@@ -39,6 +40,11 @@ client.once('ready', async () => {
     })
 
 });
+let y = process.openStdin()
+y.addListener("data", res => {
+    let x = res.toString().trim().split(/ +/g)
+    client.channels.cache.get("681657479691632640").send(x.join(" "));
+});
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -49,7 +55,7 @@ client.on('message', message => {
     if (!client.commands.has(command)) return;
 
 try {
-	client.commands.get(command).execute(message, args);
+	client.commands.get(command).execute(client, message, args);
 } catch (error) {
 	console.error(error);
 	//message.reply('there was an error trying to execute that command!, if this error persists please DM the dev');
@@ -103,7 +109,6 @@ client.on('message', async message => {
 		.addField("_joke", "gets a joke")
 		.addField("_cnjoke", "gets a chuck norris coding joke")
 		.addField("_meme", "gets a meme from a variety of subreddits")
-		.addField("_urban [word]", "gets the definition of a word from urban dictionary")
 		message.channel.send(embed)
 	} else if(message.content === "_help 4") {
 		let embed = new Discord.MessageEmbed()
@@ -115,6 +120,11 @@ client.on('message', async message => {
 		.addField("_bal", "check your balance")
 		.addField("_daily", "gets you 500 coins every day")
 		.addField("_give [user] [amount]", "lets you pay a user")
+		.addField("_mine", "mine for diamonds")
+		.addField("_fish", "fish for sea food")
+		.addField("_shop", "view shop")
+		.addField("_buy [item id]", "buy an item from the shop")
+		.addField("_inv", "see your inventory")
 		message.channel.send(embed)
 	} else if(message.content === "_help 5") {
 		let embed = new Discord.MessageEmbed()
@@ -124,6 +134,12 @@ client.on('message', async message => {
 		.addField("_coronastate [US State]", "gets covid stats for a specific US State")
 		.addField("_weather [location]", "gets weather data on a sepcific location")
 		.addField("_rank", "check your rank")
+		message.channel.send(embed)
+
+	} else if(message.content === "_help 6" || message.content === "_help nsfw") {
+		let embed = new Discord.MessageEmbed()
+		.setColor("RANDOM")
+		.addField("_urban [word]", "gets the definition of a word from urban dictionary")
 		message.channel.send(embed)
 	}
 
@@ -150,6 +166,10 @@ client.on('message', async message => {
         .setTitle(`From r/${random}`)
         .setURL(`https://reddit.com/r/${random}`);
 		message.channel.send(embed)
+	}
+	let owo = qdb.fetch(`uwus_${message.guild.id}`)
+	if (message.content === "uwu" || message.content === "owo") {
+		qdb.add(`uwus_${message.guild.id}`, 1)
 	}
 })
 

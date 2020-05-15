@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports = {
 	name: 'pyra',
 	description: 'get a pyra scramble',
-	execute(message, args) {
+	execute(client,message, args) {
         var pyra = cube.type("pyram").get()
         message.channel.send(pyra)
 	},

@@ -5,7 +5,7 @@ const ms = require("parse-ms")
 module.exports = {
     name:"daily",
     description:"redeem 500 coins daily",
-    execute(message, args) {
+    execute(client,message, args) {
         let timeout = 86400000
         let amount = 500
     

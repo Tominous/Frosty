@@ -8,7 +8,7 @@ module.exports = {
   description: "Get the stats of corona",
   usage: "corona all or corona <country>",
   aliases: ["covid", "covid19"],
-  execute: async ( message, args) => {
+  execute: async (client, message, args) => {
     
     if(!args.length) {
       return message.channel.send("Please give the name of country")

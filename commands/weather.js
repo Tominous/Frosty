@@ -4,7 +4,7 @@ var weather = require('weather-js');
 module.exports = {
 	name: 'weather',
 	description: 'get weather info',
-	execute: async(message, args) => {
+	execute: async(client,message, args) => {
         if(!args.length) {
             return message.channel.send("Please give the weather location")
           }

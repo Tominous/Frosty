@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports = {
 	name: 'squan',
 	description: 'get a squan scramble',
-	execute(message, args) {
+	execute(client,message, args) {
         var squan = cube.type("sq1").get()
         message.channel.send(squan)
 	},

@@ -4,9 +4,14 @@ const urban = require("urban")
 module.exports = {
 	name: 'urban',
 	description: 'get a definition from urban dictionary',
-	execute: async(message, args) => {
+	execute: async(client,message, args) => {
         let prefix = "_"
         let urbanargs = message.content.substring(prefix.length).split(' ')
+
+        if (message.channel.nsfw === false) {
+          message.channel.send("NSFW channels only")
+        } else {
+
         if(args.length < 1) return message.channel.send("Please enter a word")
         let string = args.join(" ")
         
@@ -25,5 +30,6 @@ module.exports = {
           .setFooter(json.author)
           message.channel.send(urbanembed)
         });
+      }
 	},
 };

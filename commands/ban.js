@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'ban',
 	description: 'ban a user',
-	execute(message, args) {
+	execute(client,message, args) {
         if (!message.guild) return;
 
 

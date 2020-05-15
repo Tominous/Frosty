@@ -5,7 +5,7 @@ const db = require('quick.db')
 module.exports = {
 	name: 'stonks',
 	description: 'invest in some stonks',
-	execute: async(message, args) => {
+	execute: async(client,message, args) => {
         let timeoutstonks = 600000
         let stonks =  db.fetch(`stonks${message.author.id}`)
 
@@ -23,7 +23,7 @@ module.exports = {
 
             let embed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setAuthor(`${message.author.tag}, it payed off`, message.author.displayAvatarURL())
+            .setAuthor(`${message.author.tag}, it paid off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you invested in ${job} and earnt ${amountearned} coins`)
 
             message.channel.send(embed)

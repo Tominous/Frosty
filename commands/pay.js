@@ -4,7 +4,7 @@ const db = require('quick.db')
 module.exports = {
 	name: 'give',
 	description: 'give some of your money to someone else',
-	execute: async(message, args) => {
+	execute: async(client,message, args) => {
 		let user = message.mentions.members.first() 
 
     let member = db.fetch(`money_${message.author.id}`)
