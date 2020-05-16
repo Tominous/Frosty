@@ -31,6 +31,7 @@ dbl.on('posted', () => {
 client.once('ready', async () => {
 	console.log('Ready!');
 	let servers = client.guilds.cache.size
+
 	client.user.setPresence({
         status: "dnd",
         activity: {
@@ -39,7 +40,20 @@ client.once('ready', async () => {
         }
     })
 
-});
+    })
+
+	client.on("guildCreate", guild => {
+		console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+		client.user.setActivity("_help | " + client.guilds.cache.size + " servers"); 
+	  });
+
+	  client.on("guildDelete", guild => {
+		console.log(`I have been removed from: ${guild.name} (id: ${guild.id}). This guild had ${guild.memberCount} members :(`);
+		client.user.setActivity("_help | " + client.guilds.cache.size + " servers"); 
+	  });
+
+
+
 let y = process.openStdin()
 y.addListener("data", res => {
     let x = res.toString().trim().split(/ +/g)
