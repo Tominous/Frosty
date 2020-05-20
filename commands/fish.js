@@ -6,12 +6,12 @@ module.exports = {
 	description: 'fish',
     execute: async(client, message, args) => {
         if (db.has(`${message.author.id}`, "fishing rod") === true) {
-            let timeoutstonks = 600000
-            let stonks =  db.fetch(`fish_${message.author.id}`)
+            let timeoutfished = 60000
+            let fished =  db.fetch(`fished_${message.author.id}`)
     
     
-            if (stonks != null && timeoutstonks - (Date.now() - stonks) > 0) {
-                let time = ms(timeoutstonks - (Date.now() - stonks));
+            if (fished != null && timeoutfished - (Date.now() - fished) > 0) {
+                let time = ms(timeoutfished - (Date.now() - fished));
                 message.channel.send(`You have already fished please come back in **${time.hours}h ${time.minutes}m ${time.seconds}s**`)
     
     
@@ -29,7 +29,7 @@ module.exports = {
                 message.channel.send(embed)
     
                 db.add(`money_${message.author.id}`, amountearned)
-                db.set(`fish_${message.author.id}`, Date.now())
+                db.set(`fished_${message.author.id}`, Date.now())
             }
     
         } else {

@@ -31,12 +31,12 @@ dbl.on('posted', () => {
 client.once('ready', async () => {
 	console.log('Ready!');
 	let servers = client.guilds.cache.size
-
+	let users = client.users.cache.size
 	client.user.setPresence({
         status: "dnd",
         activity: {
-            name:"_help | " + servers + " servers",
-            type: "PLAYING"
+            name:"_help | " + servers + " servers | " + users + " users",
+            type: "WATCHING"
         }
     })
 

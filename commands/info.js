@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const package = require('../package.json')
 const dependencies = package.dependencies
+const { stripIndent } = require('common-tags')
 module.exports = {
 	name: 'info',
 	description: 'shows the bots info',
@@ -16,8 +17,6 @@ module.exports = {
         .addField("Version", "v2.1", true)
         .addField("Prefix", "_", true)
         .addField("Support Server", "https://discord.gg/aSN6UcF", true)
-        .addField("Github Repo", "https://github.com/kenrag24/Frosty", true)
-        .addField("Guide", "https://kenrag24.gitbook.io/frosty/", true)
         .addField("Memory Usage", usedmemoryinmb + " MB", true)
         .addField("Owner" , "NerdNoOneLikes#0115", true)
         .addField("CPU", "1.8 GHz Intel Core i5", true)
