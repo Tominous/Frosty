@@ -15,6 +15,7 @@
     "dblapi.js": "^2.4.0",
     "discord-jokes": "^1.0.12",
     "discord.js": "^12.2.0",
+    "erela.js": "^1.1.8",
     "ms": "^2.1.2",
     "novelcovid": "^1.2.7",
     "parse-ms": "^2.1.0",

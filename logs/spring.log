@@ -1,0 +1,213 @@
+2020-05-21 23:08:50.580  INFO 10297 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        e270ec688cbad900d9de292a9e615f15c48a9a82-SNAPSHOT
+	Build:          987
+	Build time:     23.03.2020 20:28:53 UTC
+	Branch          BullyJava11
+	Commit:         e270ec6
+	Commit time:    23.03.2020 19:56:15 UTC
+	JVM:            13.0.3
+	Lavaplayer      1.3.47
+
+2020-05-21 23:08:51.290  INFO 10297 --- [main] lavalink.server.Launcher                 : Starting Launcher on Raghav-Air.hsd1.tx.comcast.net with PID 10297 (/Users/sadashivappakenchannavar/Desktop/Frosty/Lavalink.jar started by sadashivappakenchannavar in /Users/sadashivappakenchannavar/Desktop/Frosty)
+2020-05-21 23:08:51.291  INFO 10297 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2020-05-21 23:08:51.840  WARN 10297 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-21 23:08:54.031  WARN 10297 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-05-21 23:08:54.102  INFO 10297 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-05-21 23:08:54.103  INFO 10297 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2411 ms
+2020-05-21 23:08:55.063  WARN 10297 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2020-05-21 23:08:55.115  INFO 10297 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Mac OS X, Arch: x86_64
+2020-05-21 23:08:55.116  WARN 10297 --- [main] l.s.c.AudioSendFactoryConfiguration      : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2020-05-21 23:08:55.867  INFO 10297 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2020-05-21 23:08:56.618  INFO 10297 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:08:57.749  INFO 10297 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-05-21 23:08:57.793  INFO 10297 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-05-21 23:08:58.008  INFO 10297 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-21 23:08:58.041 ERROR 10297 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.boot.web.server.PortInUseException: Port 7500 is already in use
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:154) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+
+2020-05-21 23:08:58.048 ERROR 10297 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7500 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7500 or configure this application to listen on another port.
+
+2020-05-21 23:08:58.067  INFO 10297 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:08:58.079  INFO 10297 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2020-05-21 23:09:17.710  INFO 10382 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        e270ec688cbad900d9de292a9e615f15c48a9a82-SNAPSHOT
+	Build:          987
+	Build time:     23.03.2020 20:28:53 UTC
+	Branch          BullyJava11
+	Commit:         e270ec6
+	Commit time:    23.03.2020 19:56:15 UTC
+	JVM:            13.0.3
+	Lavaplayer      1.3.47
+
+2020-05-21 23:09:17.929  INFO 10382 --- [main] lavalink.server.Launcher                 : Starting Launcher on Raghav-Air.hsd1.tx.comcast.net with PID 10382 (/Users/sadashivappakenchannavar/Desktop/Frosty/Lavalink.jar started by sadashivappakenchannavar in /Users/sadashivappakenchannavar/Desktop/Frosty)
+2020-05-21 23:09:17.930  INFO 10382 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2020-05-21 23:09:18.183  WARN 10382 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-21 23:09:19.970  WARN 10382 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-05-21 23:09:20.048  INFO 10382 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-05-21 23:09:20.049  INFO 10382 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2021 ms
+2020-05-21 23:09:20.834  WARN 10382 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2020-05-21 23:09:20.873  INFO 10382 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Mac OS X, Arch: x86_64
+2020-05-21 23:09:20.875  WARN 10382 --- [main] l.s.c.AudioSendFactoryConfiguration      : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2020-05-21 23:09:21.976  INFO 10382 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2020-05-21 23:09:22.612  INFO 10382 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:09:23.065  INFO 10382 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-05-21 23:09:23.082  INFO 10382 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-05-21 23:09:23.217  INFO 10382 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-21 23:09:23.233 ERROR 10382 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.boot.web.server.PortInUseException: Port 7500 is already in use
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:154) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+
+2020-05-21 23:09:23.244 ERROR 10382 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7500 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7500 or configure this application to listen on another port.
+
+2020-05-21 23:09:23.252  INFO 10382 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:09:23.264  INFO 10382 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2020-05-21 23:10:31.323  INFO 10571 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        e270ec688cbad900d9de292a9e615f15c48a9a82-SNAPSHOT
+	Build:          987
+	Build time:     23.03.2020 20:28:53 UTC
+	Branch          BullyJava11
+	Commit:         e270ec6
+	Commit time:    23.03.2020 19:56:15 UTC
+	JVM:            13.0.3
+	Lavaplayer      1.3.47
+
+2020-05-21 23:10:31.525  INFO 10571 --- [main] lavalink.server.Launcher                 : Starting Launcher on Raghav-Air.hsd1.tx.comcast.net with PID 10571 (/Users/sadashivappakenchannavar/Desktop/Frosty/Lavalink.jar started by sadashivappakenchannavar in /Users/sadashivappakenchannavar/Desktop/Frosty)
+2020-05-21 23:10:31.526  INFO 10571 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2020-05-21 23:10:31.772  WARN 10571 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-05-21 23:10:33.441  WARN 10571 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-05-21 23:10:33.487  INFO 10571 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-05-21 23:10:33.488  INFO 10571 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1863 ms
+2020-05-21 23:10:34.578  WARN 10571 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2020-05-21 23:10:34.585  INFO 10571 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Mac OS X, Arch: x86_64
+2020-05-21 23:10:34.586  WARN 10571 --- [main] l.s.c.AudioSendFactoryConfiguration      : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2020-05-21 23:10:35.035  INFO 10571 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2020-05-21 23:10:35.706  INFO 10571 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:10:36.089  INFO 10571 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2020-05-21 23:10:36.106  INFO 10571 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-05-21 23:10:36.252  INFO 10571 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-21 23:10:36.259 ERROR 10571 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.boot.web.server.PortInUseException: Port 7500 is already in use
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:154) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+
+2020-05-21 23:10:36.269 ERROR 10571 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7500 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7500 or configure this application to listen on another port.
+
+2020-05-21 23:10:36.275  INFO 10571 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-21 23:10:36.277  INFO 10571 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

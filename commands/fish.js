@@ -6,7 +6,7 @@ module.exports = {
 	description: 'fish',
     execute: async(client, message, args) => {
         if (db.has(`${message.author.id}`, "fishing rod") === true) {
-            let timeoutfished = 60000
+            let timeoutfished = 6000
             let fished =  db.fetch(`fished_${message.author.id}`)
     
     

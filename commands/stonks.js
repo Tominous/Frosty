@@ -16,7 +16,7 @@ module.exports = {
 
 
         } else {
-            let amountearned = Math.floor(Math.random() * 500) + 1
+            let amountearned = Math.floor(Math.random() * 5000) + 1
 
             let jobs = ["Tesla", "Apple", "Google", "Frosty Inc", "JP Morgan", "Wells Fargo", "Discord", "Facebook"]
             let job = jobs[Math.floor(Math.random()* jobs.length)]

@@ -23,7 +23,7 @@ module.exports = {
 
             let embed = new Discord.MessageEmbed()
             .setColor("RANDOM")
-            .setAuthor(`${message.author.tag}, it payed off`, message.author.displayAvatarURL())
+            .setAuthor(`${message.author.tag}, it paid off`, message.author.displayAvatarURL())
             .setDescription(`${message.author}, you searched a ${job} and found ${amountearned} coins`)
 
             message.channel.send(embed)

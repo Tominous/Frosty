@@ -5,6 +5,7 @@ const { VultrexDB } = require("vultrex.db");
 const randomPuppy = require('random-puppy')
 const client = new Discord.Client();
 const qdb = require('quick.db')
+const { ErelaClient } = require("erela.js")
 client.commands = new Discord.Collection();
 const db = new VultrexDB({
   provider: "sqlite",
@@ -20,7 +21,7 @@ for (const file of commandFiles) {
 }
 
 const DBL = require("dblapi.js");
-const dbl = new DBL('token', client);
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODA4NTU1NDg2ODUxODk0MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTg4MjkwMDg5fQ.rGeDQM42CoZATB1XOaf60lKWAPS0XFq5kKkq7SNT7CQ', client);
 dbl.on('posted', () => {
 	console.log('Server count posted!');
   })
@@ -39,8 +40,7 @@ client.once('ready', async () => {
             type: "WATCHING"
         }
     })
-
-    })
+})
 
 	client.on("guildCreate", guild => {
 		console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
