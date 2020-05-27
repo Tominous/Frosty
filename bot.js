@@ -21,7 +21,7 @@ for (const file of commandFiles) {
 }
 
 const DBL = require("dblapi.js");
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODA4NTU1NDg2ODUxODk0MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTg4MjkwMDg5fQ.rGeDQM42CoZATB1XOaf60lKWAPS0XFq5kKkq7SNT7CQ', client);
+const dbl = new DBL('token','client');
 dbl.on('posted', () => {
 	console.log('Server count posted!');
   })
