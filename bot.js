@@ -72,7 +72,7 @@ try {
 	client.commands.get(command).execute(client, message, args);
 } catch (error) {
 	console.error(error);
-	//message.reply('there was an error trying to execute that command!, if this error persists please DM the dev');
+	message.reply('there was an error trying to execute that command!, if this error persists please DM the dev');
 }
 });
 
@@ -91,7 +91,7 @@ client.on('message', async message => {
 	if (levelInfo.xp >= levelInfo.level * 40) {
 		levelInfo.level++;
 		levelInfo.xp = 0;;
-		//message.channel.send(`You are now level **${levelInfo.level}**!`)
+		message.channel.send(`You are now level **${levelInfo.level}**!`)
 	}
 
 	await db.set(`level-${message.guild.id}-${message.author.id}`, levelInfo)
