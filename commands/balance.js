@@ -15,6 +15,6 @@ module.exports = {
                 .addField("Balance", `${money} coins`)
                 .setThumbnail(user.avatarURL())
             message.channel.send(embed)
-                //message.channel.send(`${user} you have ${money} coins`)
+                message.channel.send(`${user} you have ${money} coins`)
 	},
 };
