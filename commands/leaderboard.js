@@ -1,7 +1,7 @@
 const {
     MessageEmbed
 } = require('discord.js')
-//const db = require('vultrex.db')
+const db = require('vultrex.db')
 const functions = require('../structures/functions')
 
 module.exports = {
