@@ -3,7 +3,7 @@ const client = new Discord.Client()
 
 module.exports = {
 	name: 'stats',
-	description: 'view stats of a person or a server',
+	description: 'view statistics of a person or a server',
 	execute(client,message, args) {
         if(message.author.bot) return;
         if(message.content.toLowerCase().startsWith('_stats')) {
