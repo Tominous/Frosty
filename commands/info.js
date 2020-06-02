@@ -4,7 +4,7 @@ const dependencies = package.dependencies
 const { stripIndent } = require('common-tags')
 module.exports = {
 	name: 'info',
-	description: 'shows the bots info',
+	description: 'shows the bots information',
 	execute: async(client,message, args) => {
         const usedmemory = process.memoryUsage().heapUsed / 1024 / 1024
         const usedmemoryinmb = `${Math.round(usedmemory)}`
